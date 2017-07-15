@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+02.<html>  
+03.<head lang="en">  
+04.    <meta charset="UTF-8">  
+05.    <title>简单的图片切换</title>  
+06.    <script>  
+07.        var crr=1;  
+08.        function changePic(){  
+09.            var imgObj=document.getElementById("myPic");  
+10.            imgObj.src=crr+".png";  
+11.  
+12.        }  
+13.        window.onload=function(){  
+14.            document.getElementById("previousBut").addEventListener("click",function(){  
+15.                if(crr>1){  
+16.                    crr--;  
+17.                }  
+18.                changePic();  
+19.  
+20.            },false);  
+21.            document.getElementById("nextBut").addEventListener("click",function(){  
+22.                if(crr<6){  
+23.                    crr++;  
+24.                }  
+25.                changePic();  
+26.            },false);  
+27.        }  
+28.    </script>  
+29.</head>  
+30.<body>  
+31.     <div id="showPic">  
+32.         <img src="images/skill1.png" id="myPic" style="width:320px">  
+33.         </div>  
+34.     <div id="ctrlPic">  
+35.         <button id="previousBut">上一张</button>  
+36.         <button id="nextBut">下一张</button>  
+37.         </div>  
+38.</body>  
+39.</html>  
